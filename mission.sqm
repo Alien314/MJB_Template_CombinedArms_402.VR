@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=1837;
+		nextID=1847;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=242;
+		nextID=244;
 	};
 	class Camera
 	{
-		pos[]={4002.2612,82.697289,4235.7305};
-		dir[]={-0.65535891,-0.7548635,-0.02746284};
-		up[]={-0.7542026,0.65587586,-0.031604044};
-		aside[]={-0.041870363,-5.2584801e-07,0.99915707};
+		pos[]={3974.4871,32.748562,4355.0952};
+		dir[]={-0.85768437,-0.50782633,0.080574699};
+		up[]={-0.50560027,0.86145914,0.047498427};
+		aside[]={0.09353289,-1.7229468e-08,0.99561727};
 	};
 };
 binarizationWanted=0;
@@ -306,19 +306,6 @@ class CustomAttributes
 		name="TMF_ORBAT_Settings";
 		class Attribute0
 		{
-			property="TMF_ORBATTrackerCondition";
-			expression="false";
-			class Value
-			{
-				class data
-				{
-					singleType="STRING";
-					value="true";
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="TMF_ORBATTracker";
 			expression="false";
 			class Value
@@ -327,6 +314,19 @@ class CustomAttributes
 				{
 					singleType="BOOL";
 					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="TMF_ORBATTrackerCondition";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="true";
 				};
 			};
 		};
@@ -8575,7 +8575,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="[]";
+									value="[1]";
 								};
 							};
 						};
@@ -35725,7 +35725,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="[1,6,0]";
+							value="[1,0]";
 						};
 					};
 				};
@@ -40295,7 +40295,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="[18,8,10]";
+							value="[18,10]";
 						};
 					};
 				};
@@ -57426,7 +57426,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="[1,6,0]";
+							value="[1,0]";
 						};
 					};
 				};
@@ -69945,7 +69945,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="[12,1,15]";
+							value="[1,15]";
 						};
 					};
 				};
@@ -70328,7 +70328,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="[12,1,16]";
+							value="[1,16]";
 						};
 					};
 				};
@@ -79112,7 +79112,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="[6,0,1]";
+							value="[0,1]";
 						};
 					};
 				};
@@ -79931,6 +79931,158 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
+						position[]={3888.125,5.0014391,4332.1748};
+						angles[]={0,1.5089593,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="Sharpshooter";
+						isPlayable=1;
+					};
+					id=1755;
+					type="B_recon_M_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="TMF_SpecialistMarker";
+							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="["""",""""]";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="greenmag_main_MagSkillCoef";
+							expression="_this setVariable [""greenmag_main_MagSkillCoef"", parseNumber (_value toFixed 1), true]";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.60000002;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="TMF_assignGear_faction";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="player_loadout";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="TMF_assignGear_enabled";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="acre_sys_radio_edenSetup";
+							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="ace_isEngineer";
+							expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.97000003;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male06ENG";
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="TMF_assignGear_full";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[""sfdmr"",""player_loadout"",true]";
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="TMF_assignGear_role";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="sfdmr";
+								};
+							};
+						};
+						nAttributes=10;
+					};
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
 						position[]={3892.125,5.0014391,4332.5498};
 						angles[]={0,1.5990533,0};
 					};
@@ -80073,158 +80225,6 @@ class Mission
 								{
 									singleType="STRING";
 									value="sfaar";
-								};
-							};
-						};
-						nAttributes=10;
-					};
-				};
-				class Item5
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={3888.125,5.0014391,4332.1748};
-						angles[]={0,1.5089593,0};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						description="Sharpshooter";
-						isPlayable=1;
-					};
-					id=1755;
-					type="B_recon_M_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="TMF_SpecialistMarker";
-							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="["""",""""]";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="greenmag_main_MagSkillCoef";
-							expression="_this setVariable [""greenmag_main_MagSkillCoef"", parseNumber (_value toFixed 1), true]";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.60000002;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="TMF_assignGear_faction";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="player_loadout";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="TMF_assignGear_enabled";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="acre_sys_radio_edenSetup";
-							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="ace_isEngineer";
-							expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.97000003;
-								};
-							};
-						};
-						class Attribute7
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male06ENG";
-								};
-							};
-						};
-						class Attribute8
-						{
-							property="TMF_assignGear_full";
-							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[""sfdmr"",""player_loadout"",true]";
-								};
-							};
-						};
-						class Attribute9
-						{
-							property="TMF_assignGear_role";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="sfdmr";
 								};
 							};
 						};
@@ -83760,7 +83760,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="[8,10]";
+							value="[10]";
 						};
 					};
 				};
